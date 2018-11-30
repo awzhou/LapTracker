@@ -10,8 +10,9 @@
         android:id="@+id/editText_add_reps"
         android:layout_width="37dp"
         android:layout_height="46dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginTop="44dp"
         android:ems="10"
         android:hint="@string/add_reps"
         android:inputType="number"
@@ -19,21 +20,26 @@
         app:layout_constraintEnd_toStartOf="@+id/textView_add_multiply"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_add_instructions"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/editText_add_distance"
         android:layout_width="91dp"
         android:layout_height="46dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="44dp"
         android:ems="10"
         android:hint="@string/add_distance"
         android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/button_add_addPart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textView_add_multiply" />
+        app:layout_constraintStart_toEndOf="@+id/textView_add_multiply"
+        app:layout_constraintTop_toBottomOf="@+id/textView_add_instructions"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView_add_multiply"
@@ -96,4 +102,12 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top"
+        app:constraint_referenced_ids="editText_add_reps,editText_add_distance,textView_add_multiply"
+        tools:layout_editor_absoluteY="511dp" />
 </android.support.constraint.ConstraintLayout>
