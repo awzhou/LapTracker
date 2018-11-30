@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteY="81dp">
+
+    <EditText
+        android:id="@+id/editText_add_reps"
+        android:layout_width="37dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="@string/add_reps"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/button_add_addPart"
+        app:layout_constraintEnd_toStartOf="@+id/textView_add_multiply"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_add_distance"
+        android:layout_width="91dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginStart="16dp"
+        android:ems="10"
+        android:hint="@string/add_distance"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/button_add_addPart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView_add_multiply" />
+
+    <TextView
+        android:id="@+id/textView_add_multiply"
+        android:layout_width="20dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/add_multiply"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/button_add_addPart"
+        app:layout_constraintEnd_toStartOf="@+id/editText_add_distance"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/editText_add_reps"
+        app:layout_constraintTop_toBottomOf="@+id/textView_add_instructions" />
+
+    <EditText
+        android:id="@+id/editText_add_rounds"
+        android:layout_width="86dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:hint="@string/add_rounds"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/button_add_submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_add_addPart" />
+
+    <Button
+        android:id="@+id/button_add_addPart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_addPart"
+        app:layout_constraintBottom_toTopOf="@+id/editText_add_rounds"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_add_multiply" />
+
+    <Button
+        android:id="@+id/button_add_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_add_rounds" />
+
+    <TextView
+        android:id="@+id/textView_add_instructions"
+        android:layout_width="339dp"
+        android:layout_height="74dp"
+        android:text="@string/add_instructions"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/textView_add_multiply"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>

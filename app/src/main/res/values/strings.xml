@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">LapTracker</string>
+    <string name="title_add">Add Set</string>
+    <string name="title_view">View Workout</string>
+    <string name="add_multiply">x</string>
+    <string name="add_reps">#</string>
+    <string name="add_distance">Distance</string>
+    <string name="add_rounds">Rounds</string>
+    <string name="add_addPart">Add Part</string>
+    <string name="add_submit">Submit Set</string>
+    <string name="add_instructions">TextView</string>
+</resources>
