@@ -14,6 +14,9 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView mTextMessage;
 
+    public static Set set;
+    public static Workout w;
+
     Fragment currentFragment = null;
     FragmentTransaction ft;
 
@@ -30,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
                     ft.commit();
                     return true;
                 case R.id.navigation_view:
-                    //currentFragment = new ViewFragment();
+                    currentFragment = new ViewFragment();
                     ft = getSupportFragmentManager().beginTransaction();
                     ft.replace(R.id.container, currentFragment);
                     ft.commit();

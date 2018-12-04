@@ -13,4 +13,9 @@
         android:icon="@drawable/ic_menu_view"
         android:title="@string/title_view" />
 
+    <item
+        android:id="@+id/navigation_history"
+        android:icon="@drawable/ic_menu_history"
+        android:title="@string/title_history" />
+
 </menu>

@@ -2,6 +2,7 @@
     <string name="app_name">LapTracker</string>
     <string name="title_add">Add Set</string>
     <string name="title_view">View Workout</string>
+    <string name="title_history">View History</string>
     <string name="add_multiply">x</string>
     <string name="add_reps">#</string>
     <string name="add_distance">Distance</string>

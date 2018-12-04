@@ -24,6 +24,7 @@ public class Workout {
         return yardage;
     }
 
+    @Override
     public String toString() {
 
         String workout = "";

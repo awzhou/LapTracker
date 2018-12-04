@@ -1,5 +1,6 @@
 package com.example.laptracker;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -24,6 +25,8 @@ public class AddFragment extends Fragment {
     private Set set;
     private Workout w;
 
+    public static final String EXTRA_WORKOUT = "the workout";
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -32,8 +35,8 @@ public class AddFragment extends Fragment {
         //inflate our view (make java objects from the xml)
         View rootView = inflater.inflate(R.layout.fragment_add, container, false);
 
-        set = new Set();
-        w = new Workout();
+        MainActivity.set = new Set();
+        MainActivity.w = new Workout();
 
         //wire widgets & set listeners
         //the rootView has the findViewById in it
@@ -55,7 +58,7 @@ public class AddFragment extends Fragment {
                 if (repsLength > 0 && distanceLength > 0) {
                     int reps = Integer.parseInt(editTextReps.getText().toString());
                     int distance = Integer.parseInt(editTextDistance.getText().toString());
-                    set.addPart(reps, distance);
+                    MainActivity.set.addPart(reps, distance);
                     Toast.makeText(getActivity(), "Part added successfully.", Toast.LENGTH_SHORT).show();
                     editTextReps.setText("");
                     editTextDistance.setText("");
@@ -68,15 +71,27 @@ public class AddFragment extends Fragment {
         buttonSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int rounds = Integer.parseInt(editTextRounds.getText().toString());
+                int rounds = 1;
 
-                if (rounds > 1) {
-                    set.addRounds(rounds);
+                String input = editTextRounds.getText().toString();
+
+                if (!(input.equals(""))) {
+                    rounds = Integer.parseInt(input);
                 }
 
-                w.addSet(set);
-                Toast.makeText(getActivity(), "Set added successfully.", Toast.LENGTH_SHORT).show();
-                editTextRounds.setText("");
+                if (rounds > 1) {
+                    MainActivity.set.addRounds(rounds);
+                }
+
+                if (!(MainActivity.set.equals(null))) {
+                    MainActivity.w.addSet(MainActivity.set);
+                    Toast.makeText(getActivity(), "Set added successfully.", Toast.LENGTH_SHORT).show();
+                    editTextRounds.setText("");
+                    MainActivity.set = new Set();
+                }
+                else {
+                    Toast.makeText(getActivity(), "Please enter at least one part.", Toast.LENGTH_SHORT).show();
+                }
 
             }
         });
