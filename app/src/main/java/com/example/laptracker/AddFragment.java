@@ -1,5 +1,6 @@
 package com.example.laptracker;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -12,6 +13,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class AddFragment extends Fragment {
 
@@ -84,9 +90,26 @@ public class AddFragment extends Fragment {
                 }
 
                 if (!(MainActivity.set.equals(null))) {
+
                     MainActivity.w.addSet(MainActivity.set);
+
+                    String filename = "workout.txt";
+                    String fileContents = MainActivity.w.toString();
+                    FileOutputStream outputStream;
+
+                    try {
+                        outputStream = getActivity().openFileOutput(filename, Context.MODE_PRIVATE);
+                        outputStream.write(fileContents.getBytes());
+                        outputStream.close();
+                    }
+                    catch (Exception e) {
+                        e.printStackTrace();
+                    }
+
                     Toast.makeText(getActivity(), "Set added successfully.", Toast.LENGTH_SHORT).show();
+
                     editTextRounds.setText("");
+
                     MainActivity.set = new Set();
                 }
                 else {
