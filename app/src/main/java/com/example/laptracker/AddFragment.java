@@ -43,6 +43,7 @@ public class AddFragment extends Fragment {
 
         MainActivity.set = new Set();
         MainActivity.w = new Workout();
+        MainActivity.yardage = 0;
 
         //wire widgets & set listeners
         //the rootView has the findViewById in it
@@ -92,6 +93,7 @@ public class AddFragment extends Fragment {
                 if (!(MainActivity.set.equals(null))) {
 
                     MainActivity.w.addSet(MainActivity.set);
+                    MainActivity.yardage = MainActivity.w.getTotalYardage();
 
                     String filename = "workout.txt";
                     String fileContents = MainActivity.w.toString();

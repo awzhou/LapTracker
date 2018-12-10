@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     public static Set set;
     public static Workout w;
+    public static int yardage;
 
     Fragment currentFragment = null;
     FragmentTransaction ft;
@@ -49,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        set = new Set();
 
 
         ft = getSupportFragmentManager().beginTransaction();

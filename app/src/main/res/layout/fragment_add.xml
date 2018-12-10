@@ -63,6 +63,7 @@
         android:ems="10"
         android:hint="@string/add_rounds"
         android:inputType="number"
+        android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/button_add_submit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -104,7 +105,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <android.support.constraint.Barrier
-        android:id="@+id/barrier"
+        android:id="@+id/barrier_add_inputs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:barrierDirection="top"

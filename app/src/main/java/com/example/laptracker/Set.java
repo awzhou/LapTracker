@@ -30,6 +30,10 @@ public class Set {
         return yardage;
     }
 
+    public int getRounds() {
+        return rounds;
+    }
+
     @Override
     public String toString() {
 

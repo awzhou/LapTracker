@@ -10,4 +10,6 @@
     <string name="add_addPart">Add Part</string>
     <string name="add_submit">Submit Set</string>
     <string name="add_instructions">TextView</string>
+    <string name="view_workout">TextView</string>
+    <string name="view_yardage">TextView</string>
 </resources>

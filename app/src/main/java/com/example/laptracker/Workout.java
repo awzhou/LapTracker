@@ -18,7 +18,11 @@ public class Workout {
         int yardage = 0;
 
         for (Set s : sets) {
-            yardage += s.getYardage();
+            int rounds = s.getRounds();
+
+            for (int i = 0; i < rounds; i++) {
+                yardage += s.getYardage();
+            }
         }
 
         return yardage;
