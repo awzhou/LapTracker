@@ -1,7 +1,6 @@
 package com.example.laptracker;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -13,11 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.io.File;
 import java.io.FileOutputStream;
-import java.io.FileWriter;
-import java.io.IOException;
 
 public class AddFragment extends Fragment {
 
@@ -41,9 +36,6 @@ public class AddFragment extends Fragment {
         //inflate our view (make java objects from the xml)
         View rootView = inflater.inflate(R.layout.fragment_add, container, false);
 
-        MainActivity.set = new Set();
-        MainActivity.w = new Workout();
-        MainActivity.yardage = 0;
 
         //wire widgets & set listeners
         //the rootView has the findViewById in it
